@@ -27,8 +27,6 @@
       margin-bottom: 44px;
     }
 
-    /* 선택 기능: 프로필 사진을 넣으려면 photo.jpg를 같은 폴더에 두고 아래 주석을 해제하세요 */
-    /*
     .profile-photo {
       width: 100px;
       height: 100px;
@@ -38,7 +36,6 @@
       display: block;
       margin: 0 auto 22px;
     }
-    */
 
     .name-line {
       font-size: 1.5em;
@@ -102,6 +99,97 @@
       color: #555555;
       margin-top: 8px;
       line-height: 1.55;
+    }
+
+    /* ── 핵심역량 그리드 ── */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 0;
+    }
+
+    .competency-card {
+      border: 1px solid #dde2ea;
+      border-radius: 8px;
+      padding: 20px 18px;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .competency-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #003366;
+    }
+
+    .competency-number {
+      font-size: 0.7em;
+      font-weight: 700;
+      color: #003366;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .competency-title {
+      font-size: 0.97em;
+      font-weight: 700;
+      color: #003366;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .competency-desc {
+      font-size: 0.82em;
+      color: #555555;
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+
+    @media (max-width: 480px) {
+      .competency-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── 전문분야 ── */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .expertise-card {
+      background: #003366;
+      border-radius: 8px;
+      padding: 22px 16px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .expertise-icon {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .expertise-title {
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+
+    @media (max-width: 480px) {
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ── 버튼 그룹 ── */
@@ -183,8 +271,7 @@
 
     <!-- 프로필 -->
     <section class="profile-section">
-      <!-- 선택 기능: photo.jpg를 같은 폴더에 두고 아래 주석을 해제하세요 -->
-      <!-- <img src="photo.jpg" alt="손영환 프로필 사진" class="profile-photo"> -->
+      <img src="지브리.png" alt="손영환 프로필 사진" class="profile-photo">
 
       <p class="name-line">손영환 · 경영지도사 · 이노서스컨설팅 대표</p>
 
@@ -195,6 +282,50 @@
         이노서스컨설팅은 '혁신(Innovation)'과 '신뢰(Trust)'를 두 축으로 운영됩니다.
       </p>
     </section>
+
+    <!-- 핵심역량 -->
+    <h2 class="section-title">핵심역량</h2>
+
+    <div class="competency-grid">
+      <div class="competency-card">
+        <div class="competency-number">01</div>
+        <div class="competency-title">실행형 전략수립</div>
+        <div class="competency-desc">32년 현장 경험을 바탕으로 이론에 머물지 않는 즉시 실행 가능한 전략을 수립합니다.</div>
+      </div>
+      <div class="competency-card">
+        <div class="competency-number">02</div>
+        <div class="competency-title">맞춤형 컨설팅</div>
+        <div class="competency-desc">업종·규모·상황에 따라 동일한 틀 없이 기업별 최적 솔루션을 제공합니다.</div>
+      </div>
+      <div class="competency-card">
+        <div class="competency-number">03</div>
+        <div class="competency-title">AI 마케팅 전문성</div>
+        <div class="competency-desc">AI 기반 데이터 분석으로 고객 행동을 파악하고 디지털 마케팅 성과를 극대화합니다.</div>
+      </div>
+      <div class="competency-card">
+        <div class="competency-number">04</div>
+        <div class="competency-title">성과창출</div>
+        <div class="competency-desc">초기 상담 후 3개월 이내 측정 가능한 매출 변화를 만드는 것을 원칙으로 합니다.</div>
+      </div>
+    </div>
+
+    <!-- 전문분야 -->
+    <h2 class="section-title">전문분야</h2>
+
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <span class="expertise-icon">📈</span>
+        <div class="expertise-title">MARKETING<br>STRATEGY</div>
+      </div>
+      <div class="expertise-card">
+        <span class="expertise-icon">🤖</span>
+        <div class="expertise-title">AI & DX<br>STRATEGY</div>
+      </div>
+      <div class="expertise-card">
+        <span class="expertise-icon">💡</span>
+        <div class="expertise-title">BUSINESS<br>INNOVATION</div>
+      </div>
+    </div>
 
     <!-- 주요 경력 -->
     <h2 class="section-title">주요 경력</h2>
